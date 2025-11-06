@@ -23,8 +23,9 @@ module.exports = async (req, res) => {
     const data = await apiResponse.json();
     res.status(200).json(data);
 
-  } catch (error) {=
+  } catch (error) {
     res.status(500).json({ message: 'Error fetching from target API', error: error.message });
   }
 };
+
 
