@@ -1,7 +1,8 @@
 {
-  "name": "my-proxy-server",
+  "name": "kobilitymaps-lite-proxy",
   "version": "1.0.0",
   "engines": {
     "node": "18.x"
   }
+
 }
