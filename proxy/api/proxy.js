@@ -1,4 +1,4 @@
-// 파일 경로: /api/proxy.js
+//proxy/api/proxy.js
 
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -29,4 +29,5 @@ export default async function handler(req, res) {
   } catch (error) {
     res.status(500).json({ message: 'Error fetching from target API', error: error.message });
   }
+
 }
