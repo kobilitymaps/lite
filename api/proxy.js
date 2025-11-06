@@ -16,7 +16,6 @@ module.exports = async (req, res) => {
 
   try {
     const apiResponse = await fetch(targetURL);
-=
     if (!apiResponse.ok) {
       throw new Error(`API server responded with status ${apiResponse.status}`);
     }
@@ -28,3 +27,4 @@ module.exports = async (req, res) => {
     res.status(500).json({ message: 'Error fetching from target API', error: error.message });
   }
 };
+
