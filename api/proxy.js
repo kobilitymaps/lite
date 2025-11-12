@@ -21,12 +21,19 @@ module.exports = async (req, res) => {
     }
 
     const data = await apiResponse.json();
+    
+    res.setHeader(
+      'Cache-Control',
+      's-maxage=30, stale-while-revalidate=60'
+    );
+    
     res.status(200).json(data);
 
   } catch (error) {
     res.status(500).json({ message: 'Error fetching from target API', error: error.message });
   }
 };
+
 
 
 
